@@ -23,13 +23,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+import android.widget.AdapterView.AdapterContextMenuInfo;
 
 public class BemIttTweets extends ListActivity {
 
 	private static final String TAG = "BemIttTweets";
 
-	// For the ListView "copying" function
-	private String mCopyText;
+	List<twitter4j.Status> statuses;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -55,16 +55,18 @@ public class BemIttTweets extends ListActivity {
 		super.onCreateContextMenu(menu, v, menuInfo);
 
 		menu.add(0, 1, 0, "Copy");
-		mCopyText = (String) ((TextView) findViewById(R.id.text)).getText();
 	}
 
 	@Override
 	public boolean onContextItemSelected(MenuItem item) {
+		AdapterContextMenuInfo info = (AdapterContextMenuInfo) item
+				.getMenuInfo();
 		switch (item.getItemId()) {
 		case 1:
 			// Gets a handle to the clipboard service.
 			ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
-			clipboard.setText("@ittelkom: " + mCopyText);
+			clipboard.setText("@bem_itt: "
+					+ statuses.get((info.position) - 1).getText());
 			return true;
 		default:
 			return super.onContextItemSelected(item);
@@ -90,7 +92,6 @@ public class BemIttTweets extends ListActivity {
 			adapter = new ArrayAdapter<String>(BemIttTweets.this,
 					R.layout.tweetsrow, R.id.text);
 
-			List<twitter4j.Status> statuses;
 			try {
 				// Gets the ittelkom's timeline
 				statuses = twitter.getUserTimeline("bem_itt");

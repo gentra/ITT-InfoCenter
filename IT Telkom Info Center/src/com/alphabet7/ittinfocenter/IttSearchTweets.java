@@ -22,13 +22,13 @@ import android.view.View;
 import android.view.ContextMenu.ContextMenuInfo;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+import android.widget.AdapterView.AdapterContextMenuInfo;
 
 public class IttSearchTweets extends ListActivity {
 
 	private static final String TAG = "IttSearchTweets";
 
-	// For the ListView "copying" function
-	private String mCopyText;
+	QueryResult result;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -49,18 +49,19 @@ public class IttSearchTweets extends ListActivity {
 		super.onCreateContextMenu(menu, v, menuInfo);
 
 		menu.add(0, 1, 0, "Copy");
-
-		TextView tvList = (TextView) v.findViewById(R.id.text);
-		mCopyText = tvList.getText().toString();
 	}
 
 	@Override
 	public boolean onContextItemSelected(MenuItem item) {
+		AdapterContextMenuInfo info = (AdapterContextMenuInfo) item
+				.getMenuInfo();
 		switch (item.getItemId()) {
 		case 1:
+			Tweet tweet = result.getTweets().get(info.position);
 			// Gets a handle to the clipboard service.
 			ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
-			clipboard.setText("@ittelkom: " + mCopyText);
+			clipboard.setText("@" + tweet.getFromUser() + ": "
+					+ tweet.getText());
 			return true;
 		default:
 			return super.onContextItemSelected(item);
@@ -86,7 +87,6 @@ public class IttSearchTweets extends ListActivity {
 					"iOCpzjS3X5hMeZoZgLlbMFJcPWff9TLZyK6hchV8");
 			twitter.setOAuthAccessToken(a);
 
-			QueryResult result;
 			Log.i(TAG, "Start loading tweets");
 			try {
 				// Gets the ittelkom's timeline
