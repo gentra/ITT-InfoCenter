@@ -26,6 +26,13 @@ public class ITTTweetsActivity extends TabActivity {
 				.setContent(intent);
 		tabHost.addTab(spec);
 
+		// @ittelkomlibrary Tweets Tab
+		intent = new Intent().setClass(this, IttLibraryTweets.class);
+		spec = tabHost.newTabSpec("library")
+				.setIndicator(null, res.getDrawable(R.drawable.ittlibrary))
+				.setContent(intent);
+		tabHost.addTab(spec);
+
 		// @infoitt Tweets Tab
 		intent = new Intent().setClass(this, InfoIttTweets.class);
 		spec = tabHost.newTabSpec("infoitt")
@@ -33,10 +40,10 @@ public class ITTTweetsActivity extends TabActivity {
 				.setContent(intent);
 		tabHost.addTab(spec);
 
-		// @ittelkomlibrary Tweets Tab
-		intent = new Intent().setClass(this, IttLibraryTweets.class);
-		spec = tabHost.newTabSpec("library")
-				.setIndicator(null, res.getDrawable(R.drawable.ittlibrary))
+		// @bem_itt Tweets Tab
+		intent = new Intent().setClass(this, BemIttTweets.class);
+		spec = tabHost.newTabSpec("bem")
+				.setIndicator(null, res.getDrawable(R.drawable.bemitt))
 				.setContent(intent);
 		tabHost.addTab(spec);
 
