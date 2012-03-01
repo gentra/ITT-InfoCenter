@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, ITTelkomInfoCenterActivity!</string>
+    <string name="app_name">ITT InfoCenter</string>
+    <string name="mainmenu">Main Menu</string>
+    <string name="ittwebfeed">News Feed (ittelkom.ac.id)</string>
+    <string name="twitter">Tweets</string>
+    <string name="arounditt">Around ITT</string>
+    <string name="helpdialog">News Feed:\nMenampilkan berita-berita terbaru dari web resmi IT Telkom (ittelkom.ac.id).\n\nTweets:\nMenampilkan akun-akun twitter yang menyediakan info-info mengenai IT Telkom.\n\nAround ITT:\nMenampilkan tweets yang berada di sekitar IT Telkom.\n\nITT Talk:\nMenampilkan tweets yang berhubungan dengan IT Telkom.\n\nContact Support:\nNomor kontak support resmi IT Telkom.\n\nEmail Support:\nUntuk mengirim email ke alamat email resmi IT Telkom.</string>
+    <string name="app_version">0.8</string>
+    <string name="about">The Twitter feeds are built using the Twitter4J library.\n\nPlease submit your feedbacks or bug reports to:\ngentra.a@gmail.com\n\nFeatures for The Next Version:\n- BK IT Telkom News\n- Facebook Integration\n- Able to reply on Twitter</string>
+</resources>

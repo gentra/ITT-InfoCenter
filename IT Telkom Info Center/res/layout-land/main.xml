@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:background="@drawable/titlebar"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:layout_marginRight="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ittlogo" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:text="@string/app_name"
+            android:textColor="#ffffff"
+            android:textSize="25dip"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/label"
+        android:layout_width="fill_parent"
+        android:layout_height="25dip"
+        android:background="#5746ff" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingLeft="10dip"
+            android:text="@string/mainmenu"
+            android:textSize="20dip" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="top"
+            android:layout_marginTop="20dp" >
+
+            <TableRow android:gravity="center_horizontal" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <ImageButton
+                        android:id="@+id/ittWebFeed"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/ittfeed"
+                        android:onClick="onFeedBtnClick"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="News Feed"
+                        android:textColor="#000000" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/twitter"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/itttweet"
+                        android:onClick="onTweetsBtnClick"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="@string/twitter"
+                        android:textColor="#000000" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/around"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/around"
+                        android:onClick="onAroundIttBtnClick"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="@string/arounditt"
+                        android:textColor="#000000" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow android:gravity="center_horizontal" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/itttalk"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/tweettalk"
+                        android:onClick="onIttTalkBtnClick"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="ITT Talk"
+                        android:textColor="#000000" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/ittdial"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/callsupport"
+                        android:onClick="onDialBtnClick"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="Contact Support"
+                        android:textColor="#000000" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/ittemail"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/emailsupport"
+                        android:onClick="onEmailBtnClick"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="Email Support"
+                        android:textColor="#000000" />
+                </LinearLayout>
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+</LinearLayout>
