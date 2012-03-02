@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+   Copyright 2012 Gentra Aditya Putra Ruswanda
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+-->
 <resources>
+
     <string name="hello">Hello World, ITTelkomInfoCenterActivity!</string>
     <string name="app_name">ITT InfoCenter</string>
     <string name="mainmenu">Main Menu</string>
@@ -7,6 +23,7 @@
     <string name="twitter">Tweets</string>
     <string name="arounditt">Around ITT</string>
     <string name="helpdialog">News Feed:\nMenampilkan berita-berita terbaru dari web resmi IT Telkom (ittelkom.ac.id).\n\nTweets:\nMenampilkan akun-akun twitter yang menyediakan info-info mengenai IT Telkom.\n\nAround ITT:\nMenampilkan tweets yang berada di sekitar IT Telkom.\n\nITT Talk:\nMenampilkan tweets yang berhubungan dengan IT Telkom.\n\nContact Support:\nNomor kontak support resmi IT Telkom.\n\nEmail Support:\nUntuk mengirim email ke alamat email resmi IT Telkom.</string>
-    <string name="app_version">0.8</string>
+    <string name="app_version">0.8-r2</string>
     <string name="about">The Twitter feeds are built using the Twitter4J library.\n\nPlease submit your feedbacks or bug reports to:\ngentra.a@gmail.com\n\nFeatures for The Next Version:\n- BK IT Telkom News\n- Facebook Integration\n- Able to reply on Twitter</string>
+
 </resources>
